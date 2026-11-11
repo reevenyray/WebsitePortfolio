@@ -58,9 +58,9 @@ export const profile = {
 
 // Replace with your real details. These feed the Contact page.
 export const contact = {
-  email: 'your.email@example.com',
-  github: 'https://github.com/your-username',
-  linkedin: 'https://www.linkedin.com/in/your-profile',
+  email: 'reevenyray@gmail.com',
+  github: 'https://github.com/reevenyray',
+  linkedin: 'https://www.linkedin.com/in/reevenyray',
 };
 
 export const navItems = [
