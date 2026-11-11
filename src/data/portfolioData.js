@@ -107,7 +107,7 @@ export const focusAreas = [
 //   hue   - 0-360, tints that project's carousel slide
 //   kind  - mock UI drawn when there is no image: 'dashboard' | 'store' | 'tracker' | 'mobile'
 // categories - one or more; each shows as a coloured pill and a filter chip
-export const projects = [
+const projectList = [
   {
     id: 'safe-clsu',
     title: 'SafeCLSU',
@@ -177,3 +177,10 @@ export const projects = [
     kind: 'mobile',
   },
 ];
+
+// `category` (first entry) is kept alongside `categories` so older component
+// files that still read a single category keep working.
+export const projects = projectList.map((project) => ({
+  ...project,
+  category: project.categories[0],
+}));

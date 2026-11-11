@@ -4,15 +4,21 @@ import styles from './ProjectCard.module.css';
 // "Management System" -> "management-system" (used to pick the tag colours)
 const slug = (text) => text.toLowerCase().replace(/[^a-z0-9]+/g, '-');
 
-// Props: title, category, summary (strings), highlights, tags (arrays),
+// Props: title, summary (strings), categories, highlights, tags (arrays),
 // link (optional string)
-function ProjectCard({ title, category, summary, highlights, tags, link }) {
+function ProjectCard({ title, categories, summary, highlights, tags, link }) {
   return (
     <article className={styles.card}>
       <header className={styles.header}>
-        <span className="category-pill" data-category={slug(category)}>
-          {category}
-        </span>
+        <ul className={styles.categories} aria-label="Categories">
+          {categories.map((category) => (
+            <li key={category}>
+              <span className="category-pill" data-category={slug(category)}>
+                {category}
+              </span>
+            </li>
+          ))}
+        </ul>
         <h3 className={styles.title}>{title}</h3>
       </header>
 
