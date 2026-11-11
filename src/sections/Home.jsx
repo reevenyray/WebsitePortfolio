@@ -76,13 +76,13 @@ function Home({ profile, projects, focusAreas, onNavigate }) {
           icon={FiFolder}
           label="Projects"
           value={projects.length}
-          note="Web apps and management systems"
+          note="Web, mobile, and management systems"
         />
         <StatTile
           icon={FiTarget}
           label="Focus areas"
           value={focusAreas.length}
-          note="Dev, support, UI/UX, and QA"
+          note="Dev, prototyping, UI/UX, and QA"
         />
         <StatTile
           icon={FiBookOpen}

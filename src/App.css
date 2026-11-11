@@ -26,6 +26,10 @@
   --cat-e-commerce-fg: #121512;
   --cat-management-system-bg: #7fd1c7;
   --cat-management-system-fg: #0d1b1a;
+  --cat-mobile-app-bg: #f0a3c4;
+  --cat-mobile-app-fg: #1d0b14;
+  --cat-dashboard-bg: #b9adf7;
+  --cat-dashboard-fg: #14102b;
 
   /* Carousel visual tints (hue comes from each project) */
   --glow-alpha: 0.28;
@@ -56,6 +60,10 @@
   --cat-e-commerce-fg: #1e2320;
   --cat-management-system-bg: #1d5b56;
   --cat-management-system-fg: #ffffff;
+  --cat-mobile-app-bg: #8f2c58;
+  --cat-mobile-app-fg: #ffffff;
+  --cat-dashboard-bg: #4a3d9c;
+  --cat-dashboard-fg: #ffffff;
 
   --glow-alpha: 0.22;
 
@@ -680,6 +688,16 @@ body {
   background: var(--cat-e-commerce-bg);
 }
 
+.category-pill[data-category='mobile-app'] {
+  color: var(--cat-mobile-app-fg);
+  background: var(--cat-mobile-app-bg);
+}
+
+.category-pill[data-category='dashboard'] {
+  color: var(--cat-dashboard-fg);
+  background: var(--cat-dashboard-bg);
+}
+
 .category-pill[data-category='management-system'] {
   color: var(--cat-management-system-fg);
   background: var(--cat-management-system-bg);
@@ -920,7 +938,7 @@ body {
 
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
   gap: 1.5rem;
 }
 

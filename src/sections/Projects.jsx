@@ -6,9 +6,9 @@ function Projects({ projects }) {
   // State: the active category filter.
   const [filter, setFilter] = useState('All');
 
-  const categories = ['All', ...new Set(projects.map((p) => p.category))];
+  const categories = ['All', ...new Set(projects.flatMap((p) => p.categories))];
   const visibleProjects =
-    filter === 'All' ? projects : projects.filter((p) => p.category === filter);
+    filter === 'All' ? projects : projects.filter((p) => p.categories.includes(filter));
 
   return (
     <div className="page">
@@ -38,7 +38,7 @@ function Projects({ projects }) {
           <ProjectCard
             key={project.id}
             title={project.title}
-            category={project.category}
+            categories={project.categories}
             summary={project.summary}
             highlights={project.highlights}
             tags={project.tags}

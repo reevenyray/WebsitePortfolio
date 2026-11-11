@@ -6,7 +6,7 @@ import {
   FiLayers,
   FiBarChart2,
   FiCrosshair,
-  FiMonitor,
+  FiLayout,
 } from 'react-icons/fi';
 
 export const profile = {
@@ -48,19 +48,19 @@ export const profile = {
     {
       id: 'beyond',
       label: 'Beyond the code',
-      lead: 'I also troubleshoot the systems that run software.',
+      lead: 'I also design intuitive user experiences.',
       detail:
-        'An interest in tech support and help desk work taught me to isolate hardware and software issues efficiently and explain the fix clearly to end-users.',
-      points: ['Hardware & software issues', 'Clear communication'],
+        'A strong interest in UI/UX design has taught me how to empathize with users, translate their needs into clean wireframes, and build accessible, user-friendly interfaces.',
+      points: ['Wireframing & Prototyping', 'User-centered design'],
     },
   ],
 };
 
 // Replace with your real details. These feed the Contact page.
 export const contact = {
-  email: 'reevenyray@gmail.com',
-  github: 'https://github.com/reevenyray',
-  linkedin: 'https://www.linkedin.com/in/reevenyray',
+  email: 'your.email@example.com',
+  github: 'https://github.com/your-username',
+  linkedin: 'https://www.linkedin.com/in/your-profile',
 };
 
 export const navItems = [
@@ -79,11 +79,11 @@ export const focusAreas = [
     icon: FiLayers,
   },
   {
-    id: 'tech-support',
-    title: 'Tech Support & Help Desk',
+    id: 'prototyping',
+    title: 'Wireframing & Prototyping',
     description:
-      'Providing hands-on hardware and software troubleshooting, resolving technical issues efficiently, and supporting end-users with clear communication.',
-    icon: FiMonitor,
+      'Creating structured layouts and interactive prototypes to map out user journeys, test functionality, and bridge the gap between design and development.',
+    icon: FiLayout,
   },
   {
     id: 'ui-ux-design',
@@ -105,12 +105,13 @@ export const focusAreas = [
 //   link  - repository or live demo URL (shows a "View project" button)
 //   image - screenshot path, e.g. '/safeclsu.png' (replaces the generated visual)
 //   hue   - 0-360, tints that project's carousel slide
-//   kind  - mock UI drawn when there is no image: 'dashboard' | 'store' | 'tracker'
+//   kind  - mock UI drawn when there is no image: 'dashboard' | 'store' | 'tracker' | 'mobile'
+// categories - one or more; each shows as a coloured pill and a filter chip
 export const projects = [
   {
     id: 'safe-clsu',
     title: 'SafeCLSU',
-    category: 'Web App',
+    categories: ['Web App', 'Mobile App', 'Dashboard'],
     summary:
       'A centralized emergency response application designed for Central Luzon State University to streamline campus incident reporting and improve response times.',
     highlights: [
@@ -127,7 +128,7 @@ export const projects = [
   {
     id: 'techno-hub',
     title: 'TechnoHub',
-    category: 'E-commerce',
+    categories: ['E-commerce'],
     summary:
       'A specialized digital storefront tailored for PC builders and tech enthusiasts to efficiently source, compare, and purchase computer components.',
     highlights: [
@@ -144,7 +145,7 @@ export const projects = [
   {
     id: 'hog-tracker',
     title: 'HogTracker',
-    category: 'Management System',
+    categories: ['Management System'],
     summary:
       'A digital management system built for swine farms to track livestock health, monitor inventory, and analyze growth metrics.',
     highlights: [
@@ -157,5 +158,22 @@ export const projects = [
     image: '',
     hue: 168,
     kind: 'tracker',
+  },
+  {
+    id: 'i-tour',
+    title: 'iTour',
+    categories: ['Mobile App'],
+    summary:
+      'A native Android tourism application designed to help travelers seamlessly discover local destinations, navigate with interactive maps, and manage attraction bookings in one platform.',
+    highlights: [
+      'Features interactive maps for effortless navigation to local tourist spots',
+      'Showcases curated attraction listings with detailed destination info',
+      'Enables direct in-app booking and reservation management for travelers',
+    ],
+    tags: ['Android Studio', 'Mobile App', 'UI/UX Design'],
+    link: '',
+    image: '',
+    hue: 212,
+    kind: 'mobile',
   },
 ];

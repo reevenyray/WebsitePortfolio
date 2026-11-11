@@ -116,12 +116,15 @@ function ProjectCarousel({ projects, onNavigate }) {
                       <span className="slide__count" aria-hidden="true">
                         {pad(i + 1)} / {pad(count)}
                       </span>
-                      <span
-                        className="category-pill"
-                        data-category={slug(project.category)}
-                      >
-                        {project.category}
-                      </span>
+                      {project.categories.map((category) => (
+                        <span
+                          key={category}
+                          className="category-pill"
+                          data-category={slug(category)}
+                        >
+                          {category}
+                        </span>
+                      ))}
                     </div>
 
                     <h3 className="slide__title">{project.title}</h3>

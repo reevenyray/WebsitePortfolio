@@ -1,7 +1,7 @@
 // Abstract UI illustrations used in the carousel until real screenshots
 // exist. Pass `image` to show a screenshot instead. Purely decorative.
 // Colours come from the --hue set on the parent slide (see App.css, .vis__*).
-// Props: kind ('dashboard' | 'store' | 'tracker'), image (string, optional)
+// Props: kind ('dashboard' | 'store' | 'tracker' | 'mobile'), image (string, optional)
 
 function Chrome() {
   return (
@@ -111,7 +111,41 @@ function Tracker() {
   );
 }
 
-const kinds = { dashboard: Dashboard, store: Store, tracker: Tracker };
+function Mobile() {
+  // A phone centred in the frame: map with route + pins, then listing cards.
+  return (
+    <>
+      <rect x="0" y="0" width="480" height="320" className="vis__bar" />
+      <rect x="168" y="14" width="144" height="320" rx="22" className="vis__frame" />
+      <rect x="176" y="22" width="128" height="304" rx="16" className="vis__ghost" />
+      <rect x="226" y="28" width="28" height="5" rx="2.5" className="vis__faint" />
+      {/* map */}
+      <rect x="182" y="42" width="116" height="108" rx="8" className="vis__faint" />
+      {[70, 98, 126].map((y) => (
+        <line key={y} x1="182" x2="298" y1={y} y2={y} className="vis__grid" />
+      ))}
+      {[212, 240, 268].map((x) => (
+        <line key={x} y1="42" y2="150" x1={x} x2={x} className="vis__grid" />
+      ))}
+      <path d="M194 136 C214 116 222 126 240 100 S272 80 288 58" className="vis__line" />
+      <circle cx="288" cy="58" r="12" className="vis__halo" />
+      <circle cx="288" cy="58" r="5.5" className="vis__strong" />
+      <circle cx="194" cy="136" r="4.5" className="vis__soft" />
+      {/* listings */}
+      {[160, 206, 252].map((y, i) => (
+        <g key={y}>
+          <rect x="182" y={y} width="116" height="40" rx="8" className="vis__bar" />
+          <rect x="188" y={y + 6} width="28" height="28" rx="6" className="vis__soft" />
+          <rect x="224" y={y + 10} width="52" height="7" rx="3.5" className="vis__soft" />
+          <rect x="224" y={y + 24} width="34" height="6" rx="3" className="vis__faint" />
+          <rect x="272" y={y + 22} width="20" height="10" rx="5" className={i === 0 ? 'vis__strong' : 'vis__faint'} />
+        </g>
+      ))}
+    </>
+  );
+}
+
+const kinds = { dashboard: Dashboard, store: Store, tracker: Tracker, mobile: Mobile };
 
 function ProjectVisual({ kind = 'dashboard', image }) {
   if (image) {
