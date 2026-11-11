@@ -3,7 +3,7 @@ import { AnimatePresence, MotionConfig, motion } from 'framer-motion';
 
 import './App.css';
 import NavigationMenu from './components/NavigationMenu';
-import ThemeToggle from './components/ThemeToggle';
+import ThemeToggle from './components/Themetoggle';
 import Home from './sections/Home';
 import About from './sections/About';
 import Projects from './sections/Projects';
