@@ -17,7 +17,7 @@ export const profile = {
 
   // HEADSHOT: put a forward-facing photo in /public (e.g. headshot.jpg), then
   // set photo: '/headshot.jpg'. Leave it empty to show the placeholder frame.
-  photo: '',
+  photo: '/yray.png',
   photoAlt: 'Portrait of Reeven Yray',
   resume: '/Reeven_Yray_Resume.pdf',
 
